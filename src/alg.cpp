@@ -7,10 +7,10 @@ int cbinsearch(int *arr, int size, int value) {
   if (((left_b >= middle) || (right_b <= middle)) && (arr[middle] != value))
     return 0;
   if (value < arr[middle])
-    cbinsearch(arr, middle, value);
+    return cbinsearch(arr, middle, value);
   else
   if (value > arr[middle]) {
-    cbinsearch(arr + middle, right_b - middle+1, value);
+    return cbinsearch(arr + middle, right_b - middle+1, value);
   } else {
     int i = 0;
     int ans = 0;
@@ -23,6 +23,6 @@ int cbinsearch(int *arr, int size, int value) {
     }
     return ans;
   }
-  if (false)
-    return 100;
+
+return 0;
 }
