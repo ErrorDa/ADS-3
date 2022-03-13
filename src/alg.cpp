@@ -8,10 +8,10 @@ int cbinsearch(int *arr, int size, int value) {
     return 0;
   if (value < arr[middle])
     cbinsearch(arr, middle, value);
-  else 
-  if (value > arr[middle])
+  else
+  if (value > arr[middle]) {
     cbinsearch(arr + middle, right_b - middle+1, value);
-  else {
+  } else {
     int i = 0;
     int ans = 0;
     while (value == arr[middle + i]) {
